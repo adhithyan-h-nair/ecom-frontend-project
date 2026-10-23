@@ -8,10 +8,10 @@ const Navbar = () => {
       <div className="flex items-center gap-4">
         <Brand/>
         <div className="links flex items-center gap-2">
-          <Link className="text-md font-medium cursor-pointer px-2 py-1 rounded-lg hover:bg-indigo-600 hover:text-white transition-colors duration-200">
+          <Link to={"/home"} className="text-md font-medium cursor-pointer px-2 py-1 rounded-lg hover:bg-indigo-600 hover:text-white transition-colors duration-200">
             Home
           </Link>
-          <Link className="text-md font-medium cursor-pointer px-2 py-1 rounded-lg hover:bg-indigo-600 hover:text-white transition-colors duration-200">
+          <Link to={"/products"} className="text-md font-medium cursor-pointer px-2 py-1 rounded-lg hover:bg-indigo-600 hover:text-white transition-colors duration-200">
             Products
           </Link>
           <Link className="text-md font-medium cursor-pointer px-2 py-1 rounded-lg hover:bg-indigo-600 hover:text-white transition-colors duration-200">

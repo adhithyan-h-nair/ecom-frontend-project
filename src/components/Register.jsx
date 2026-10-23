@@ -5,7 +5,7 @@ const Register = () => {
         <div className="flex flex-col w-full">
           <label htmlFor="fullname">Full Name</label>
           <input
-            className="w-80 border rounded-md p-2 bg-white"
+            className="border rounded-md p-2 bg-white"
             type="text"
             placeholder="Jane Doe"
             name="fullname"
@@ -15,7 +15,7 @@ const Register = () => {
         <div className="flex flex-col w-full">
           <label htmlFor="email">Email</label>
           <input
-            className="w-80 border rounded-md p-2 bg-white"
+            className="border rounded-md p-2 bg-white"
             type="email"
             placeholder="janedoe@email.com"
             name="email"
@@ -25,7 +25,7 @@ const Register = () => {
         <div className="flex flex-col w-full">
           <label htmlFor="password">Password</label>
           <input
-            className="w-80 border rounded-md p-2 bg-white"
+            className="border rounded-md p-2 bg-white"
             type="password"
             placeholder="password"
             name="password"
@@ -35,7 +35,7 @@ const Register = () => {
         <div className="flex flex-col w-full">
           <label htmlFor="password">Confirm Passowrd</label>
           <input
-            className="w-80 border rounded-md p-2 bg-white"
+            className="border rounded-md p-2 bg-white"
             type="password"
             placeholder="password"
             name="password"
