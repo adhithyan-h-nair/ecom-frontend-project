@@ -7,7 +7,7 @@ const Card = () => {
   const [like, setLike] = useState(false)
 
   return (
-    <div className="max-w-55 shadow-lg p-3 m-2 rounded-md flex flex-col gap-2">
+    <div className="max-w-70 shadow-lg p-3 m-2 rounded-md flex flex-col gap-2">
       {/* <div>
         <div>
           <span>Most Popular</span>
@@ -32,11 +32,11 @@ const Card = () => {
       </div>
       <div className=" w-full flex items-center justify-between gap-2">
         <button className="flex-4 bg-indigo-600 text-white py-2 rounded-lg cursor-pointer">Add to cart</button>
-        <button className="flex-1 cursor-pointer bg-gray-200 rounded-full flex items-center justify-center py-2"
+        <button className="cursor-pointer bg-gray-200 rounded-full flex items-center justify-center p-2"
           onClick={()=> setLike(!like)}
         >
           {
-            like ? <FaHeart color="red" /> : <FaRegHeart />   
+            like ? <FaHeart color="red" size={20}/> : <FaRegHeart size={20}/>   
           }
         </button>
       </div>
