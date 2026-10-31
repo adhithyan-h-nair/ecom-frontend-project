@@ -1,7 +1,17 @@
-const Register = () => {
+const Register = ({
+  formData,
+  registerData,
+  handleInput,
+  handleRegisterInput,
+  handleChange = handleInput || handleRegisterInput,
+  handleSubmit,
+  handleRegisterSubmit = handleSubmit,
+}) => {
+  const data = formData || registerData || {};
+
   return (
     <div>
-      <form action="" className="flex flex-col gap-3 p-2">
+      <form onSubmit={handleRegisterSubmit} className="flex flex-col gap-3 p-2">
         <div className="flex flex-col w-full">
           <label htmlFor="fullname">Full Name</label>
           <input
@@ -10,6 +20,9 @@ const Register = () => {
             placeholder="Jane Doe"
             name="fullname"
             id="fullname"
+            value={data.fullname || ""}
+            onChange={handleChange}
+            required
           />
         </div>
         <div className="flex flex-col w-full">
@@ -20,6 +33,9 @@ const Register = () => {
             placeholder="janedoe@email.com"
             name="email"
             id="email"
+            value={data.email || ""}
+            onChange={handleChange}
+            required
           />
         </div>
         <div className="flex flex-col w-full">
@@ -30,16 +46,22 @@ const Register = () => {
             placeholder="password"
             name="password"
             id="password"
+            value={data.password || ""}
+            onChange={handleChange}
+            required
           />
         </div>
         <div className="flex flex-col w-full">
-          <label htmlFor="password">Confirm Passowrd</label>
+          <label htmlFor="confirmPassword">Confirm Passowrd</label>
           <input
             className="border rounded-md p-2 bg-white"
             type="password"
             placeholder="password"
-            name="password"
-            id="password"
+            name="confirmPassword"
+            id="confirmPassword"
+            value={data.confirmPassword || ""}
+            onChange={handleChange}
+            required
           />
         </div>
         <button
